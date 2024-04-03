@@ -5,10 +5,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+var app = builder.Build();														
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())											// app is going to control the HTTP request pipeline
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -16,4 +16,4 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-app.Run();
+app.Run();																		// When this is run, the actual server is being run. This is the point of origin of the app.

@@ -1,3 +1,30 @@
+For Linux:
+
+DOTNET
+wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh ;
+chmod +x ./dotnet-install.sh ;
+./dotnet-install.sh --version latest ;
+./dotnet-install.sh --version latest --runtime aspnetcore ;
+./dotnet-install.sh --channel 8.0 ;
+export PATH="$PATH:/home/mkuipers/.dotnet"
+
+SQL Server
+curl -fsSL https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor -o /usr/share/keyrings/microsoft-prod.gpg
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
+curl -fsSL https://packages.microsoft.com/config/ubuntu/22.04/mssql-server-2022.list | sudo tee /etc/apt/sources.list.d/mssql-server-2022.list
+sudo apt-get update
+sudo apt-get install -y mssql-server
+sudo /opt/mssql/bin/mssql-conf setup
+systemctl status mssql-server --no-pager
+
+SMSS alternative for Linux: Azure Data Studio
+https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall
+
+VSCODE:
+NuGet Gallery
+Prettier
+kreativ-software.csharpextensions
+
 dotnet new webapi -o api
 cd api
 dotnet watch run
@@ -7,4 +34,4 @@ Program.cs can be compared to the back of the TV.
 It is very important here you determine what is plugged in.
 Clean up the Program.cs file.
 
-
+API is basically code that sits on top of a database and allows us to interact with databases in a safe way.

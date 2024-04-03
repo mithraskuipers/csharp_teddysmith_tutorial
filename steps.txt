@@ -1,0 +1,10 @@
+dotnet new webapi -o api
+cd api
+dotnet watch run
+Shows swagger page. Auto detects everything.
+
+Program.cs can be compared to the back of the TV.
+It is very important here you determine what is plugged in.
+Clean up the Program.cs file.
+
+

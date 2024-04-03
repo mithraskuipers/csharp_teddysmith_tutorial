@@ -24,6 +24,12 @@ VSCODE:
 NuGet Gallery
 Prettier
 kreativ-software.csharpextensions
+ms-dotnettools.vscode-dotnet-runtime
+ms-vscode.cpptools
+ms-vscode.cpptools-extension-pack
+ms-dotnettools.csharp
+ms-dotnettools.csdevkit
+
 
 dotnet new webapi -o api
 cd api
@@ -35,3 +41,36 @@ It is very important here you determine what is plugged in.
 Clean up the Program.cs file.
 
 API is basically code that sits on top of a database and allows us to interact with databases in a safe way.
+Databases are like a filing cabinet because they allow us to storage data and file it in certain ways.
+Models are like forms or blueprints for forms.
+Models and models are no different from Excel spreadsheets.
+
+Right click on api folder and create new folder named "Models
+Right click on Models folder -> New C# -> class -> Stocks.cs
+Right click on Models folder -> New C# -> class -> Comment.cs
+
+In Stocks.cs, in the class Stocks, type in "prop" and then press tab. This will automatically create a property for you.
+		public int MyProperty { get; set; }
+rename MyProperty to Id
+
+Continue until you have:
+
+		public int MyProperty { get; set; }
+		public string Symbol { get; set; } = string.Empty;
+		public string Company { get; set; } = string.Empty;
+		[Column(TypeName = "decimal(18,2)")] // 18 digits and 2 decimal places
+		public decimal Purchase { get; set; }
+		[Column(TypeName = "decimal(18,2)")] // 18 digits and 2 decimal places
+		public decimal LastDiv { get; set; }
+		public string Industry { get; set; } = string.Empty;
+		public long MarketCap { get; set; }
+		public List<Comment> Comments { get; set; } = new List<Comment>();
+
+
+Think of a primary key as the parent.
+
+A list is a data structure that allows to have many of something.
+
+
+.Net Core is going through our code for us and solve relationships for us.
+

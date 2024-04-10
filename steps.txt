@@ -21,7 +21,7 @@ SMSS alternative for Linux: Azure Data Studio
 https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio?tabs=win-install%2Cwin-user-install%2Credhat-install%2Cwindows-uninstall%2Credhat-uninstall
 
 VSCODE:
-NuGet Gallery
+aliasadidev.nugetpackagemanagergui
 Prettier
 kreativ-software.csharpextensions
 ms-dotnettools.vscode-dotnet-runtime
@@ -71,6 +71,21 @@ Think of a primary key as the parent.
 
 A list is a data structure that allows to have many of something.
 
-
 .Net Core is going through our code for us and solve relationships for us.
 
+In databases, an object is a row of data in a table.
+
+We need to install the following tool using NuGet Gallery
+Microsoft.EntityFrameworkCore
+
+CTRL + SHIFT + P
+>NuGet
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.SqlServer
+
+Data
+C# class ApplicationDBContext.cs
+
+ctor
+This creates a constructor
